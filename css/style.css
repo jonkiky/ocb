@@ -1448,6 +1448,42 @@ blockquote {
     display: inline-block;
 }
 
+/* Clients Section Responsive Styles */
+@media (max-width: 768px) {
+    #clients .col-4 {
+        width: 50%; /* Show 2 items per row on tablets */
+        padding: 10px;
+    }
+    
+    #clients img {
+        width: 100%;
+        height: auto;
+    }
+
+    #clients .client-overlay span {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    #clients .col-4 {
+        width: 100%; /* Show 1 item per row on mobile */
+    }
+
+    #clients .section-heading h2 {
+        font-size: 24px;
+    }
+
+    #clients .section-subtitle {
+        font-size: 16px;
+    }
+
+    .client-overlay span {
+        font-size: 16px;
+    }
+}
+
 /* --------- 6.7 Pricing Table ---------- */
 
 .pricing-block-content {
@@ -2633,3 +2669,60 @@ blockquote {
  .logo-container{
     display: flex;
   }
+
+
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.category-grid img {
+    width: 100%;
+}
+
+.shows-container {
+    position: relative; width: 100vw; height: 100vh; background: url('../images/events_bg.png') no-repeat center center; background-size: cover; display: flex; justify-content: center; align-items: center; flex-direction: column;
+}
+
+.shows-container .section-subtitle{
+ max-width: 50%;
+}
+
+
+.number-circle {
+    margin-top: 3px; margin-right: 10px;min-width: 30px; height: 30px; border: 2px solid black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; color: black; margin-bottom:0;
+}
+
+#timeline h2{
+    padding: 0;
+    font-size: 24px;
+}
+@media (max-width: 768px) {
+
+    .shows-container {
+        position: relative; width: 100vw; height: 50vh; 
+    }
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+    #shows h1{
+        font-size: 20px;
+    }
+
+    .shows-container .section-subtitle{
+        max-width: 80%;
+    }
+    .shows-container a{
+        font-size: 16px;
+    }
+
+    #gallery {
+        max-height:100vh;
+        overflow: scroll
+    }
+}
+
